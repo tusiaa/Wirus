@@ -1,0 +1,22 @@
+{
+  "name": "projekt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start_server": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "js-cookie": "^3.0.1",
+    "mqtt": "^4.3.4",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  }
+}

@@ -1,0 +1,15 @@
+*, *::after, *::before {
+  box-sizing: inherit;
+  word-break: break-word;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background: linear-gradient(to bottom, #99ff99 0%, #ffcc99 30%);
+  background-size: 100% 150em;
+}
+
+input, body {
+  font-family: Ubuntu, sans-serif;
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "login": "johndoe",
+        "password": "12345"
+    },
+    {
+        "login": "janedoe",
+        "password": "54321"
+    },
+    {
+        "login": "login",
+        "password": "password"
+    },
+    {
+        "login": "admin",
+        "password": "admin"
+    },
+    {
+        "login": "root",
+        "password": "root"
+    }
+
+]

@@ -1,0 +1,513 @@
+.App {
+  text-align: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+h1 {
+  margin-bottom: 0.2em;
+  margin-top: 0.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em; 
+}
+
+label {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin: 0.5em;
+}
+
+input {
+  border-radius: 1em; 
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  width: 15em;
+}
+
+.edit-game form{
+  padding: 0;
+}
+
+.edit-game input {
+  width: 8em;
+  margin-top: 0.5em;
+}
+
+select {
+  border-radius: 1em; 
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-top: 0.5em;
+}
+
+.info div {
+  margin: 0.25em;
+  font-weight: bold;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+button{
+  font-weight: bold;
+  background-color: white;
+  width: 10em; 
+  border-radius: 1em; 
+  margin: 0.5em;
+}
+
+.search input {
+  width: 25em;
+}
+
+.search button {
+  width: 5em;
+}
+
+.games-page{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    'header header header header'
+    'menu chat chat users'
+    'rooms rooms rooms rooms';
+}
+
+.invites{
+  height: 6em;
+  overflow: scroll;
+  padding-right: 0em;
+}
+
+.invites::-webkit-scrollbar {
+  background-color: #f2fff2;
+}
+
+.invites::-webkit-scrollbar-corner {
+  background-color: #f2fff2;
+}
+
+.invites::-webkit-scrollbar-thumb {
+  background-color: #5f6d58;
+  border-radius: 25px;
+}
+
+.invitesSection h3 {
+  margin-bottom: 0.5em;
+}
+
+.games-page h1{
+  grid-area: header;
+}
+
+.games-page .user-menu{
+  grid-area: menu;
+  height: 20em;
+  background-color: #f2fff2;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 25px;
+}
+
+.games-page .chat{
+  grid-area: chat;
+  height: 20em;
+  background-color: #5f6d58;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 25px;
+}
+
+.games-page .chat div{
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+  overflow: scroll;
+  height: 16em;
+  scrollbar-color: #f2fff2 #5f6d58;
+}
+
+.games-page .chat div::-webkit-scrollbar {
+  background-color: #5f6d58;
+}
+
+.games-page .chat div::-webkit-scrollbar-corner {
+  background-color: #5f6d58;
+}
+
+.games-page .chat div::-webkit-scrollbar-thumb {
+  background-color: #f2fff2;
+  border-radius: 25px;
+}
+
+.games-page .chat div p{
+  margin: 0.25em;
+}
+
+.games-page .chat input{
+  width: 80%
+}
+
+.games-page .chat button{
+  width: 15%;
+}
+
+.games-page .users-list{
+  grid-area: users;
+  height: 20em;
+  background-color: #f2fff2;
+  margin: 0.5em;
+  border-radius: 25px;
+}
+
+.game-page .users-list div div{
+  overflow: scroll;
+  scrollbar-color: #5f6d58 #f2fff2;
+}
+
+.game-page .users-list div div::-webkit-scrollbar {
+  background-color: #f2fff2;
+}
+
+.game-page .users-list div div::-webkit-scrollbar-corner {
+  background-color: #f2fff2;
+}
+
+.game-page .users-list div div::-webkit-scrollbar-thumb {
+  background-color: #5f6d58;
+  border-radius: 25px;
+}
+
+.games-page .rooms-list{
+  grid-area: rooms;
+  background-color: #f2fff2;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 25px;
+}
+
+.room{
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid #5f6d58;
+  overflow: auto;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+.room h3{
+  float: left;
+  margin: 0;
+}
+
+.room h4{
+  float: right;
+  margin: 0;
+  padding-right: 0.5em;
+  color: green;
+  font-weight: bold;
+}
+
+.room div {
+  float: right;
+}
+
+.unavailable{
+  opacity: 0.5;
+}
+
+.game-page{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    'header header '
+    'game menu'
+    'game players'
+    'game chat'
+    'game chat';
+}
+
+.game-page h1{
+  grid-area: header;
+}
+
+.game-page .game {
+  grid-area: game;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 25px;
+  background-color: #f2fff2;
+}
+
+.game-page .menu {
+  grid-area: menu;
+  background-color: #f2fff2;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 25px;
+}
+
+.game-page .menu button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-page .game-chat {
+  grid-area: chat;
+  background-color: #f2fff2;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 25px;
+  height: 18em;
+}
+
+.game-page .game-chat div{
+  font-size: 0.75em;
+  font-weight: bold;
+  text-align: left;
+  overflow: scroll;
+  height: 17em;
+  padding: 0.25em;
+  scrollbar-color: #5f6d58 #f2fff2;
+}
+
+.game-page .game-chat div::-webkit-scrollbar {
+  background-color: #f2fff2;
+}
+
+.game-page .game-chat div::-webkit-scrollbar-corner {
+  background-color: #f2fff2;
+}
+
+.game-page .game-chat div::-webkit-scrollbar-thumb {
+  background-color: #5f6d58;
+  border-radius: 25px;
+}
+
+.game-page .game-chat p{
+  margin: 0.25em;
+}
+
+.game-page .game-chat input{
+  width: 90%;
+  margin: 0.25em;
+}
+
+.game-page .game-chat button{
+  width: 90%;
+  margin: 0.25em;
+}
+
+.game-page .players {
+  grid-area: players;
+  background-color: #f2fff2;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 25px;
+}
+
+.game-page .players h2{
+  margin-top: 0;
+}
+
+.wait-container {
+  display: flex;
+}
+.wait {
+  margin: 0;
+  width: 100%;
+  align-self: center;
+}
+
+.game {
+  min-height: 35em;
+}
+
+.oponents button {
+  display: inline;
+  min-height: 11em;
+  width: 45%;
+  border: 0px solid;
+  padding: 0;
+  border-radius: 0;
+  background-color: #f2fff2;
+}
+
+
+.oponents .chosen {
+  border: 3px solid rgb(3, 138, 21);
+  border-radius: 25px;
+}
+
+.oponent {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5em;
+  align-self: center;
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid #5f6d58;
+  min-height: 11em;
+  width: 100%;
+}
+
+.oponent h3{
+  display: block;
+  padding: 0.5em;
+  margin: 0;
+}
+
+.oponent .card {
+  display: inline-block;
+  margin: 0em;
+  padding: 0.25em;
+  border-radius: 25px;
+  height: 9em;
+}
+
+.oponent .card img {
+  height: 100%;
+}
+
+.player {
+  display: flex;
+  margin: 1em;
+  padding: 0.5em;
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid #5f6d58;
+  min-height: 11em;
+}
+
+.player .organs {
+  width: 50%;
+  min-height: 10em;
+  display: inline-block;
+  border-right: 1px solid #5f6d58;
+}
+
+.player .cards {
+  width: 50%;
+  min-height: 10em;
+  display: inline-block;
+  border-left: 1px solid #5f6d58;
+}
+
+.player .card {
+  display: inline-block;
+  margin: 0em;
+  padding: 0.25em;
+  border-radius: 25px;
+  height: 8em;
+}
+
+.player .card button {
+  height: 100%;
+  display: inline;
+  width: auto;
+  border: 0px solid;
+  padding: 0;
+  border-radius: 0;
+}
+
+.player .card .chosen {
+  border: 3px solid rgb(3, 138, 21);
+}
+
+.player .card img {
+  height: 100%;
+}
+
+.userPage .info {
+  background-color: #f2fff2;
+  margin: 1em auto;
+  padding: 0.5em;
+  border-radius: 25px;
+  width: 30em;
+}
+
+.userPage .info textarea{
+  width: 80%;
+  height: 10em;
+}
+
+.userPage .info h3 .online {
+  display: inline;
+  color: green;
+  font-weight: bold;
+}
+
+.userPage button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userPage .messagesSection {
+  background-color: #f2fff2;
+  margin: 1em auto;
+  padding: 0.5em;
+  border-radius: 25px;
+  width: 30em;
+}
+
+.userPage .messagesSection .messages{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.userPage .messagesSection .messages .message{
+  min-height: 5em;
+  background-color: white;
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 1px solid #5f6d58;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-areas: 
+    "from to at"
+    "text text text";
+}
+
+.userPage .messagesSection .messages .message .from{
+  font-weight: bold;
+  grid-area: from;
+  text-align: left;
+  margin: 0.5em;
+}
+
+.userPage .messagesSection .messages .message .to{
+  font-weight: bold;
+  grid-area: to;
+  text-align: left;
+  margin: 0.5em;
+}
+
+.userPage .messagesSection .messages .message .at{
+  font-weight: bold;
+  grid-area: at;
+  text-align: right;
+  margin: 0.5em;
+}
+
+.userPage .messagesSection .messages .message .messageText{
+  grid-area: text;
+  border-top: 1px solid #5f6d58;
+  padding-top: 0.5em;
+  margin: 0.5em;
+}
+
+.error {
+  font-weight: bold;
+}
